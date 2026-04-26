@@ -1,0 +1,68 @@
+# Everything is ignored by default
+*
+# But not directories
+!*/
+
+# ...unless they contain slashes in the end
+!*.uplugin
+!*.uproject
+
+# Now, whitelist the files and directories we want to track in the repository
+
+# Source: Only source code and build target files
+!/Source/**
+!/Source/
+# Only C/C++ source files and C# source files are allowed
+# Only the Build.cs files, Target.cs files, and module and target rules
+# are allowed
+!*.cpp
+!*.hpp
+!*.c
+!*.h
+!*.cs
+!*.cpp
+!*.hpp
+!*.c
+!*.h
+!*.cs
+!*.xml
+!*.mm
+!*.m
+!*.rc
+!*.rc2
+!*.ico
+!*.def
+!*.mod
+!*.patch
+!*.tpl
+!*.modulemap
+!*.build.cs
+!*.target.cs
+!*.target.rules
+!*.module.rules
+
+# Config: Configuration files
+!/Config/**
+!/Config/
+
+# Plugins: Project plugins
+!/Plugins/**
+!/Plugins/
+
+# Content: Game assets
+!/Content/**
+!/Content/
+# Only .uasset and .umap files are allowed
+!*.uasset
+!*.umap
+
+# RawContent: Source assets, fully managed by Git LFS
+!/RawContent/**
+!/RawContent/
+
+# .gitattributes: Our Git LFS config
+!.gitattributes
+# .gitignore: This file itself
+!.gitignore
+
+# ... You can add your own rules here, e.g. for a README file
